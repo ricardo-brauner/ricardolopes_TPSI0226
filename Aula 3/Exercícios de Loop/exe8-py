@@ -1,0 +1,8 @@
+for i in range(10, 1001, 10):
+    print(i)
+
+print("---")
+
+# Série 2: 15, 25, 35 ... 995
+for i in range(15, 996, 10):
+    print(i)
