@@ -1,10 +1,11 @@
 mensagem = input("Digite uma mensagem: ")
 
-if mensagem == "olá" or mensagem == "ola" or mensagem == "bom dia":
-    print("Saudação")
-elif mensagem.endswith("?"):
-    print("Pergunta")
-elif "tchau" in mensagem or "adeus" in mensagem:
-    print("Despedida")
-else:
-    print("Mensagem genérica")
+match mensagem:
+    case "olá" | "ola" | "bom dia":
+        print("Saudação")
+    case m if m.endswith("?"):
+        print("Pergunta")
+    case m if "tchau" in m or "adeus" in m:
+        print("Despedida")
+    case _:
+        print("Mensagem genérica")

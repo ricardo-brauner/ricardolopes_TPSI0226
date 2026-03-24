@@ -1,9 +1,10 @@
 tipo = input("Tipo (compra/venda): ")
 valor = float(input("Valor: "))
 
-if tipo == "compra":
-    print(f"Compra de {valor}€")
-elif tipo == "venda":
-    print(f"Venda de {valor}€")
-else:
-    print("Pedido desconhecido")
+match tipo:
+    case "compra":
+        print(f"Compra de {valor}€")
+    case "venda":
+        print(f"Venda de {valor}€")
+    case _:
+        print("Pedido desconhecido")

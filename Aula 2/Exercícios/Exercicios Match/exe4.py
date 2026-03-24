@@ -1,12 +1,13 @@
 valor = input("Digite um valor: ")
 
-if valor.startswith("["):
-    print("Lista")
-elif valor.lstrip("-").isdigit():
-    print("Número inteiro")
-elif valor.lstrip("-").replace(".", "", 1).isdigit():
-    print("Número decimal")
-elif valor.isnumeric():
-    print("String numérica")
-else:
-    print("String textual")
+match valor:
+    case v if v.startswith("["):
+        print("Lista")
+    case v if v.lstrip("-").isdigit():
+        print("Número inteiro")
+    case v if v.lstrip("-").replace(".", "", 1).isdigit():
+        print("Número decimal")
+    case v if v.isnumeric():
+        print("String numérica")
+    case _:
+        print("String textual")

@@ -2,16 +2,17 @@ operacao = input("Digite a operação: ")
 num1 = float(input("Digite o número 1: "))
 num2 = float(input("Digite o número 2: "))
 
-if operacao == "soma":
-    print(num1 + num2)
-elif operacao == "subtração":
-    print(num1 - num2)
-elif operacao == "multiplicação":
-    print(num1 * num2)
-elif operacao == "divisão":
-    if num2 == 0:
-        print("Erro: divisão por zero!")
-    else:
-        print(num1 / num2)
-else:
-    print("Operação desconhecida!")
+match operacao:
+    case "soma":
+        print(num1 + num2)
+    case "subtração":
+        print(num1 - num2)
+    case "multiplicação":
+        print(num1 * num2)
+    case "divisão":
+        if num2 == 0:
+            print("Erro: divisão por zero!")
+        else:
+            print(num1 / num2)
+    case _:
+        print("Operação desconhecida!")
