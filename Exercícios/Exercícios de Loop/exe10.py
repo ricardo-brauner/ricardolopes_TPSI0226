@@ -1,3 +1,6 @@
+"""Exercício 10: Elabore um programa que lê um número e
+escreve quantos divisores ele possui"""
+
 numero = int(input("Digite um número: "))
 
 contador = 0

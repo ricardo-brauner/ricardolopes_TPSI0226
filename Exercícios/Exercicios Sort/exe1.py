@@ -8,6 +8,6 @@ def ordenar_palavras():
 
                 palavras[j], palavras[j+1] = palavras[j+1], palavras[j]
 
-    print("Palavras ordenadas:", palavras)
+    print("Palavras Ordenadas:", palavras)
 
 ordenar_palavras()

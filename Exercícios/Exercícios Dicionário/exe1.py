@@ -1,18 +1,26 @@
+"""Exercício 1: Criar um dicionário simples
+Cria um dicionário chamado alunos que receba nome, idade e curso de cada aluno:
+1-	Inserir
+2-	Listar
+O mesmo deve imprimir cada elemento do dicionário no seguinte formato por cada aluno:
+Exemplo:
+nome: Maria
+idade: 20
+curso: Engenharia"""
+
 alunos = []
 
-def inserir_alunos ():
-    nome  = input("Nome:")
+
+def inserir_alunos():
+    nome = input("Nome:")
     idade = int(input("Idade:"))
     curso = input("Curso:")
 
-    aluno = {
-        "nome": nome,
-        "idade": idade,
-        "curso": curso
-    }
+    aluno = {"nome": nome, "idade": idade, "curso": curso}
 
     alunos.append(aluno)
     print("Aluno inserido com sucesso!")
+
 
 def listar_alunos():
     if not alunos:
@@ -37,12 +45,9 @@ while True:
     if opcao == "1":
         inserir_alunos()
     elif opcao == "2":
-        listar_alunos() 
+        listar_alunos()
     elif opcao == "3":
         print("Fim do programa, obrigado!")
         break
     else:
-        print("Opção inválida, tente novamente.")    
-    
-
-    
+        print("Opção inválida, tente novamente.")
